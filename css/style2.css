@@ -1,0 +1,14 @@
+/* Element Selector */
+h2{color: blue;}
+
+/* Id selctor */
+#test{color: pink;}
+
+/* Class selctor */
+.color-orange{color: orange;}
+.bg-yellow{background-color: yellow;}
+
+/* Univarsal Selector */
+*{
+    font-size: 25px;
+}
