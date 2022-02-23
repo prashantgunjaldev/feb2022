@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Learn CSS</title>
+        <style>
+           .test p:nth-child(2) i{
+               color: red;
+           }
+
+           p::first-letter{
+               color: aqua;
+               font-size: 20px;
+           }
+        </style>
+    </head>
+    <body>
+
+        <div class="test">
+            <p>This text is wrapper in para tag. <i>child of P1</i></p>
+            <p>This text is wrapper in para tag. <i>child P2</i></p>
+            <p>This text is wrapper in para tag.<i>child P3</i></p>
+            <p>This text is wrapper in para tag. <i>child P4</i></p>
+        </div>
+
+        <div class="test">
+            <p>This text is wrapper in para tag2. <i>child of P1</i></p>
+            <p>This text is wrapper in para tag2. <i>child P2</i></p>
+            <p>This text is wrapper in para tag2.<i>child P3</i></p>
+            <p>This text is wrapper in para tag2. <i>child P4</i></p>
+        </div>
+
+        <h3>Psuedo Classes</h3>
+        <div>
+            <div>
+                first-child
+                <i>Italic text</i>
+            </div>
+            <div>
+                second-child
+                <i>Italic text</i>
+            </div>
+            <div>
+                third-child
+                <i>Italic text</i>
+            </div>
+            <!-- <span class="block-span"> Span 1</span>
+            <span class="block-span"> Span 2</span>
+            <span class="block-span"> Span 3</span>
+            <span> Span 4</span> -->
+        </div>
+
+
+        <div>
+            <p>This text is wrapper in para tag.</p>
+            <p>This text is wrapper in para tag.</p>
+            <p>This text is wrapper in para tag.</p>
+        </div>
+
+        <div class="inline-div">Div 1</div>
+        <div class="remove">Div 2</div>
+        <div class="inline-div">Div 3</div>
+    </body>
+</html>

@@ -3,7 +3,7 @@
         <title>Learn CSS</title>
         <style>
             .special{
-                margin: 50px;
+                margin: 30px;
                 padding: 25px;
                 border-style: dashed;
             }
@@ -12,20 +12,111 @@
                 border-style: dashed;
                 padding: 5px;
             }
+
+            /* div:hover{
+                background-color: yellow;
+            } */
+
+            .fix-height{
+                height: 150px;
+                overflow-y: scroll;
+            }
+
+            .static{
+                position: static;
+            }
+
+            .relative{
+                position: relative;
+                left: 10;
+                top: 20;
+            }
+            .relative-only{
+                position: relative;
+            }
+
+            .fix{
+                position: fixed;
+                /* top: 50; */
+                right: 0;
+                bottom: 0;
+            }
+
+            .absolute{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+
+            .sticky{
+                position: sticky;
+                top:0;
+            }
+
+            .warning{
+                background-color: orange;
+            }
+
+            .special-img{
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
         </style>
     </head>
     <body>
 
         <!-- Static: default position , displayes element in normal / natural order -->
-        <div class="border">
-            This div has some content to display.
+        <div class="border static">
+            This div has some content to display in a static way.
         </div>
-        <div class="special">
+        <div class="border relative">
+            This div has some content to display in a relative way.
+        </div>
+        <div class="border fix">
+            This div has some content to display in a fix way.
+        </div>
+        <div class="special relative">
             This is my first division.
 
-            <div class="special">
+            <div class="border absolute">
                 This is second division.
             </div>
+        </div>
+        <div class="border fix-height relative-only">
+            <img class="special-img" src="../images/product_2020_08_07_13_57_32_0832_2.png">
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            <p class="warning sticky"> Please read content carefully.</p>
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
+            Here is a simple text to display inside div. Here is a simple text to display inside div.
         </div>
     </body>
 </html>
