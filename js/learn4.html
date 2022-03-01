@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Learn JS</title>
+    </head>
+    <body>
+        Learn JS.
+        <script>
+            // Varaibles
+            //4 ways
+            // 1. Using var
+            // 2. Using let
+            // 3. Using const
+            // 4. use nothing
+            var name = "Prashant Gunjal"; // (Global scope) Assign any value like string, number, float etc
+            console.log(name);
+
+            let otherName = "Test Me"; // (Local scope) Assign any value like string, number, float etc
+            otherName = 'Test me 2';
+            console.log(otherName);
+
+            const pi = 3.14; // Variable with fixed value. You can not change value.
+            console.log(pi);
+
+            testVar = 'You will see me'; // var without using any keyward
+            console.log(testVar);
+
+            name = "Pravin";
+            console.log(name);
+
+            name = 20;
+            console.log(name);
+
+            // Block levl scope
+            {
+                var blockVar = "I am block Var";
+                let blockLet = "I am Block Let";
+
+                console.log("Inside Block", blockVar);
+                console.log("Inside Block", blockLet);
+            }
+
+            console.log("Outside Block", blockVar);
+            console.log("Outside Block", blockLet);
+
+        </script>
+    </body>
+</html>

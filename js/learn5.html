@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Learn JS</title>
+    </head>
+    <body>
+        Learn JS.
+        <script>
+            // Varaibles
+            var name = "Prashant Gunjal"; // (Global scope) Assign any value like string, number, float etc
+            console.log(name);
+            // Redeclaration of var
+            {
+                var name = "Pravin";
+                console.log("Inside Block", name);
+            }
+            console.log("Outside Block", name);
+
+            let otherName = "Test Me"; // (Local scope) Assign any value like string, number, float etc
+            console.log(otherName);
+            // Redeclaration of let
+            {
+                let otherName = "Other Value";
+                console.log("Inside Block", otherName);
+            }
+            console.log("Outside Block", otherName);
+
+
+        </script>
+    </body>
+</html>
