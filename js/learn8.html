@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Learn JS</title>
+    </head>
+    <body>
+        Learn JS.
+        <script>
+            // Object
+            var person = {
+                name: "Test Name",
+                age: 20
+            };
+
+            // Object property can be access by using .
+            console.log(person.age);
+            // Object property can be access by using []
+            console.log(person['age']);
+
+            //Not existing property is consider as undefined
+            console.log(person.age67);
+
+            // Complex object
+            var newPerson = {
+                name: 'Test 2 Person',
+                age: 25,
+                measurements: [12,13,45],
+                address: {
+                    fNo : "301",
+                    city: "Pune",
+                    pin: "411052",
+                    location: {
+                        lan:234,
+                        lat: 1200.3
+                    }
+                }
+            };
+
+        </script>
+    </body>
+</html>

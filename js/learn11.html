@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Learn JS</title>
+    </head>
+    <body>
+        <h3> Calculator</h3>
+        <label> No 1 : </label> <input type="number" id="no1"> <br>
+        <label> No 2 : </label><input type="number" id="no2"><br><br>
+        <button onclick="add()">Add Numbers</button><br><br>
+        <span id="outputBlock"> Result is : </span><br>
+        <script>
+            
+            function add(){
+                let a = document.getElementById("no1").value;
+                let b = document.getElementById("no2").value;
+                let res = parseFloat(a) + parseFloat(b);
+                document.getElementById("outputBlock").innerText = "Result is : "+res;
+            };
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Learn JS</title>
+    </head>
+    <body>
+        <h3> String</h3>
+        <script>
+            
+        var str1 = 'String 1 "OK"';
+        var str2 = "String 2 'ok'";
+        //Multiline string
+        var str3 = `String 3
+        ahsjhs
+        asas
+        sdsadsa
+        sdasd ${str2} `;
+
+        console.log(str1,str2,str3);
+
+        console.log(str1.length);
+
+        let name = "Prashant Gunjal";
+
+        //slice, start and end index position in function.
+        // Index can be -ve 
+        console.log(name.slice(0,8));
+
+        //substring, start and end index position in function as param.
+        // No -ve value
+        console.log(name.substring(0,8));
+
+        // Sunstr 
+        // First Arg -> start index (start from 9)
+        // second Arg -> how many char ? (next 3 characters)
+        console.log(name.substr(9,3));
+
+        //Replace
+
+        let sample = "This is a sample text";
+
+        console.log(sample.replace('text', 'string'));
+
+        console.log(sample.toLowerCase());
+        console.log(sample.toUpperCase());
+
+        // Concat
+
+        //Using +
+        console.log(str1 + str2);
+
+        // using concat menthod
+        console.log(str1.concat(str2));
+
+        //trim - remove trailing whitespaces
+
+        let s = "       ok jdsj  sdsad     ";
+        console.log(s);
+        console.log(s.trim());
+
+        let students = 'Vijay, Ajay, Ramesh, Suresh';
+        console.log(students.split(','));
+
+
+
+        </script>
+    </body>
+</html>

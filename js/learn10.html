@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Learn JS</title>
+    </head>
+    <body>
+        Learn JS. <br>
+        <span id="outputBlock"> Event output : </span><br>
+        <button onclick="add()">Click here</button><br>
+        <script>
+            
+            function add(){
+                let a =50;
+                let b =30;
+                let res = a+b;
+                document.getElementById("outputBlock").innerText = "Event output : "+res;
+                console.log("res is = ", res);
+            };
+
+
+        </script>
+    </body>
+</html>

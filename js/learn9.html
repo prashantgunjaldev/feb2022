@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Learn JS</title>
+    </head>
+    <body>
+        Learn JS.
+        <script>
+            
+            function add(){
+                let a =50;
+                let b =30;
+                let res = a+b;
+                console.log("res is = ", res);
+            };
+
+            add();
+            add();
+            add();
+
+            // Parameter based fun
+
+            function addition(a,b){
+                let res = a+b;
+                console.log("Addition res is = ", res);
+            }
+
+            addition(1,1);
+            addition(10,50);
+            addition(100,100);
+
+            // Function with return value
+
+            function addNumbers(a,b){
+                let res = a+b;
+                return res;
+            }
+
+            let ans1 = addNumbers(45,42);
+            let ans2 = addNumbers(ans1,90);
+            let ans3 = addNumbers(ans2,20);
+            console.log("Final result : ", ans3);
+
+
+
+        </script>
+    </body>
+</html>
