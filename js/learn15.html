@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Learn JS</title>
+    </head>
+    <body>
+        <h3> Voter Info</h3>
+        <label> Enter your age: </label> <input type="number" id="no1"> <br>
+        <button onclick="verify()">Verify</button><br><br>
+        <span id="outputBlock"> Result is : </span><br>
+        <script>
+            
+            function verify(){
+                let age = document.getElementById("no1").value;
+
+                if(parseInt(age) >= 18){
+                    document.getElementById("outputBlock").innerText = "Congratulations! You are eligible to vote";
+                }else{
+                    document.getElementById("outputBlock").innerText = "Ohh! You are not eligible to vote yet.";
+                }
+            };
+
+            let day = new Date().getDay();
+
+            switch(day){
+                case 0:
+                    console.log("sun");
+                    break;
+                case 1:
+                    console.log("Mon");
+                    break;
+                case 2:
+                    console.log("Tue");
+                    break;
+                case 3:
+                    console.log("Wed");
+                    break;
+                case 4:
+                    console.log("Thu");
+                    break;
+                case 5:
+                    console.log("Fri");
+                    break;
+                case 6:
+                    console.log("Sat");
+                    break;
+                default:
+                    console.log("Invalid day");
+            }
+
+        </script>
+    </body>
+</html>

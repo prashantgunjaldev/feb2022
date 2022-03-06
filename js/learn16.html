@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Learn JS</title>
+    </head>
+    <body>
+        <h3> For Loop</h3>
+        <label> Enter your age: </label> <input type="number" id="no1"> <br>
+        <button onclick="verify()">Verify</button><br><br>
+        <span id="outputBlock"> Result is : </span><br>
+        <script>
+            
+            let array = [1,2,3,4,5,6];
+
+            for(let i=0;i<7;i++){
+                console.log(array[i]);
+            }
+
+            for(let i=0;i< array.length;i++){
+                console.log(array[i]);
+            }
+
+            let i=0;
+            while(i<array.length){
+                console.log("Inside While : ",array[i]);
+                i++;
+            }
+
+
+            let complexObj = {
+                'name': "prashant",
+                'city': "Pune",
+                'a':'244',
+                'asa': '23213asaa'
+            };
+
+            console.log(complexObj.name);
+            console.log(complexObj['name']);
+
+            console.log("For in loop starts here");
+            for(let key in complexObj){
+                console.log(complexObj[key]);
+            }
+
+
+            // For Each loop to call differant function
+            array.forEach(print);
+
+            function print(val){
+                console.log("Printing ",val);
+            }
+
+            array.forEach((val)=>{
+                console.log("*", val);
+            })
+
+        </script>
+    </body>
+</html>

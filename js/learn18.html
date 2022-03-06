@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Learn JS</title>
+    </head>
+    <body>
+        <h3> JS Class</h3>
+        
+
+        <script>
+            class Student{
+                constructor(fName, lName, year){
+                    this.fName = fName;
+                    this.lName = lName;
+                    this.year = year;
+                }
+
+                print(){
+                    console.log("Student information \n", "Name : "+this.fName+" "+this.lName, "Year : "+this.year);
+                }
+            }
+
+            let std1 = new Student('Prashant','Gunjal',4);
+            std1.print();
+            let std2 = new Student('Pravin','Gunjal',3);
+            std2.print();
+        </script>
+    </body>
+</html>
