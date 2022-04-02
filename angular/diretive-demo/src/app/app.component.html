@@ -1,0 +1,37 @@
+
+    <div class="container">
+      <h1>All Students</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Class</th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let student of students; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{student.fName}}</td>
+                <td>{{student.lName}}</td>
+                <td>{{student.class}}</td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div *ngIf="showImpInfo">
+      Imp Info 
+    </div>
+
+    <div [hidden]="!showImpInfo">
+      Imp Info2
+    </div>
+
+    <div [ngSwitch]="color">
+      <div *ngSwitchCase="'red'">Color is Red</div>
+      <div *ngSwitchCase="'blue'">Color is Blue</div>
+      <div *ngSwitchCase="'purple'">Color is Purple</div>
+    </div>
+

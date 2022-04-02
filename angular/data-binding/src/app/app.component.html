@@ -1,0 +1,26 @@
+<h3>Date Binding</h3>
+
+<h4>String Interpolation</h4>
+Name of application is : {{title}} <br/>
+Version of application is : {{version}} <br/>
+
+<h4>Property Binding</h4>
+<div [id]="customId">
+  I am a div with property binding.
+</div>
+
+<h4>Event Binding</h4>
+<button (click)="onBtnClick()">Click me</button>
+
+<h4>Two way data binding</h4>
+
+<input type="text" [(ngModel)]="title">
+
+<h3>Calc using service</h3>
+
+Number 1 : <input type="number" [(ngModel)]="no1"><br/>
+Number 1 : <input type="number" [(ngModel)]="no2"><br/>
+Result is : {{result}}<br/>
+<button (click)="addNumbers()">Add</button>
+<button (click)="subNumbers()">Sub</button>
+<button (click)="mulNumbers()">Mul</button>
