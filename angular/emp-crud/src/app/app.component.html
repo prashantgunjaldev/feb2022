@@ -1,0 +1,133 @@
+<router-outlet></router-outlet>
+
+<div class="container">
+  <h3 class="text-center">Employee Crud</h3>
+  <div class="row">
+    <div class="col-12">
+      <h4 class="text-danger">Employee List</h4>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-sm btn-outline-primary float-end" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        New Employee
+      </button>
+      <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Department</th>
+            <th scope="col">Designation</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of empoloyees; let i = index">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.address}}</td>
+            <td>{{emp.mobile}}</td>
+            <td>{{emp.dept}}</td>
+            <td>{{emp.designation}}</td>
+            <td>{{emp.salary}}</td>
+            <td>
+              <button type="button" (click)="onEdit(emp)" class="btn btn-sm btn-outline-warning" data-bs-toggle="modal" data-bs-target="#editEmployee">Edit</button> &nbsp;
+              <button type="button" (click)="onDelete(emp.id)" class="btn btn-sm btn-outline-danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">New Employee</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="newEmpForm">
+          <div class="mb-1">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input type="text" formControlName="name" class="form-control">
+          </div>
+          <div class="mb-1">
+            <label for="exampleInputEmail1" class="form-label">Address</label>
+            <input type="text" formControlName="address" class="form-control" id="exampleInputEmail1">
+            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+          </div>
+          <div class="mb-1">
+            <label for="exampleInputEmail1" class="form-label">Mobile</label>
+            <input type="text" formControlName="mobile" class="form-control" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-1">
+            <label for="exampleInputEmail1" class="form-label">Department</label>
+            <input type="text" formControlName="dept" class="form-control" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-1">
+            <label for="exampleInputEmail1" class="form-label">Designation</label>
+            <input type="text" formControlName="designation" class="form-control" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-1">
+            <label for="exampleInputEmail1" class="form-label">Salary</label>
+            <input type="number" formControlName="salary" class="form-control" aria-describedby="emailHelp">
+          </div>
+          <div class="alert alert-danger" role="alert" *ngIf="showError">
+           Please fill up form!
+          </div>
+          <button type="submit" (click)="onSubmit()" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="editEmployee" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Edit Employee</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="editEmpForm">
+          <div class="mb-1">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input type="text" formControlName="name" class="form-control">
+          </div>
+          <div class="mb-1">
+            <label for="exampleInputEmail1" class="form-label">Address</label>
+            <input type="text" formControlName="address" class="form-control" id="exampleInputEmail1">
+            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+          </div>
+          <div class="mb-1">
+            <label for="exampleInputEmail1" class="form-label">Mobile</label>
+            <input type="text" formControlName="mobile" class="form-control" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-1">
+            <label for="exampleInputEmail1" class="form-label">Department</label>
+            <input type="text" formControlName="dept" class="form-control" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-1">
+            <label for="exampleInputEmail1" class="form-label">Designation</label>
+            <input type="text" formControlName="designation" class="form-control" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-1">
+            <label for="exampleInputEmail1" class="form-label">Salary</label>
+            <input type="number" formControlName="salary" class="form-control" aria-describedby="emailHelp">
+          </div>
+          <div class="alert alert-danger" role="alert" *ngIf="showError">
+           Please fill up form!
+          </div>
+          <button type="submit" (click)="onEditSubmit()" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
