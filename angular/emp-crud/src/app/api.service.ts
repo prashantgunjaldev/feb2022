@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { Employee } from './interfaces.def';
 
 @Injectable({
@@ -7,7 +8,7 @@ import { Employee } from './interfaces.def';
 })
 export class ApiService {
 
-  baseUrl = 'http://localhost:8080';
+  baseUrl = environment.serverUrl;
   api = '/employee';
   constructor(private http: HttpClient) { }
 

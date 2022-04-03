@@ -3,7 +3,7 @@ var mysql = require('mysql');
 var cors = require('cors');
 let app = express();
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
 
 let con = mysql.createConnection({
     host:"localhost",
@@ -11,6 +11,8 @@ let con = mysql.createConnection({
     password:"",
     database:"feb_batch"
 });
+
+app.use('/',express.static('pubic'));
 
 //CRUD operation on employee Object
 app.get("/employee",(req,res)=>{
